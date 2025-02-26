@@ -18,6 +18,8 @@
 #
 ---
 include:
+  # - board: peacock_controller
+  # - board: peacock_controller
+  #   shield: peacock_vik_module
   - board: peacock_controller
-  - board: peacock_controller
-    shield: peacock_vik_module
+    shield: procyon_42x50_vik_module
