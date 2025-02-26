@@ -1,0 +1,5 @@
+config SHIELD_PROCYON_42x50_VIK_MODULE
+	def_bool $(shields_list_contains,procyon_42x50_vik_module)
+	imply ZMK_MOUSE
+	imply ZMK_TRACKPAD
+	select I2C
