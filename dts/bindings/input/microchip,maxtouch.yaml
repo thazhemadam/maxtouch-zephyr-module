@@ -55,6 +55,10 @@ properties:
     type: int
     description: A secondary hysteresis used internally by the sensor. Changes to the sensor surface, or the gain may require this value to be changed.
     default: 4
+  move_hysteresis_next:
+    type: int
+    description: Next movement hysteresis. Changes to the sensor surface, or the gain may require this value to be changed.
+    default: 4
   gain:
     type: int
     description: The transmit power. Higher values allow the use of thicker touch surfaces or higher touch thresholds.

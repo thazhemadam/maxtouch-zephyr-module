@@ -49,6 +49,7 @@ struct mxt_config {
     const uint8_t touch_hysteresis;
     const uint8_t internal_touch_threshold;
     const uint8_t internal_touch_hysteresis;
+    const uint8_t move_hysteresis_next;
     const uint8_t gain;
     const uint8_t charge_time;
     const uint8_t allowed_measurement_types;

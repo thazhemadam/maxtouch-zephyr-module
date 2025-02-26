@@ -395,7 +395,7 @@ static int mxt_load_config(const struct device *dev,
         // These two fields implement a simple filter for reducing jitter, but large
         // values cause the pointer to stick in place before moving.
         t100_conf.movhysti = 10; // Initial movement hysteresis
-        t100_conf.movhystn = 4; // Next movement hysteresis
+        t100_conf.movhystn = config->move_hysteresis_next; // Next movement hysteresis
 
         t100_conf.tchdiup = 4; // MXT_UP touch detection integration - the number of cycles before the sensor decides an MXT_UP event has occurred
         t100_conf.tchdidown = 2; // MXT_DOWN touch detection integration - the number of cycles before the sensor decides an MXT_DOWN event has occurred
@@ -487,6 +487,7 @@ static int mxt_init(const struct device *dev) {
         .touch_hysteresis = DT_INST_PROP_OR(n, touch_hysteresis, 8),                                    \
         .internal_touch_threshold = DT_INST_PROP_OR(n, internal_touch_threshold, 10),                   \
         .internal_touch_hysteresis = DT_INST_PROP_OR(n, internal_touch_hysteresis, 4),                  \
+        .move_hysteresis_next = DT_INST_PROP_OR(n, move_hysteresis_next, 4),                            \
         .gain = DT_INST_PROP_OR(n, gain, 4),                                                            \
         .charge_time = DT_INST_PROP_OR(n, charge_time, 10),                                             \
         .allowed_measurement_types = DT_INST_PROP_OR(n, allowed_measurement_types, 3),                  \
