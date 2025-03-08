@@ -371,8 +371,8 @@ static int mxt_load_config(const struct device *dev,
         t100_conf.ysize = information->matrix_y_size; // Make configurable as this depends on the
                                                       // sensor design.
                                                       //
-        t100_conf.xpitch = (config->sensor_width * 10 / information->matrix_x_size); // Pitch between X-Lines (0.1mm * XPitch).
-        t100_conf.ypitch = (config->sensor_height * 10 / information->matrix_y_size); // Pitch between Y-Lines (0.1mm * YPitch).
+        t100_conf.xpitch = config->x_pitch; // Pitch between X-Lines.
+        t100_conf.ypitch = config->y_pitch; // Pitch between Y-Lines.
         t100_conf.xedgecfg = 9;
         t100_conf.xedgedist = 10;
         t100_conf.yedgecfg = 9;
@@ -483,6 +483,8 @@ static int mxt_init(const struct device *dev) {
         .invert_y = DT_INST_PROP(n, invert_y),                                                          \
         .sensor_width = DT_INST_PROP(n, sensor_width),                                                  \
         .sensor_height = DT_INST_PROP(n, sensor_height),                                                \
+        .x_pitch = DT_INST_PROP(n, x_pitch),                                                            \
+        .y_pitch = DT_INST_PROP(n, y_pitch),                                                            \
         .touch_threshold = DT_INST_PROP_OR(n, touch_threshold, 18),                                     \
         .touch_hysteresis = DT_INST_PROP_OR(n, touch_hysteresis, 8),                                    \
         .internal_touch_threshold = DT_INST_PROP_OR(n, internal_touch_threshold, 10),                   \

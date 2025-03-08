@@ -45,6 +45,8 @@ struct mxt_config {
     const bool repeat_each_cycle;
     const uint16_t sensor_width;
     const uint16_t sensor_height;
+    const uint16_t x_pitch;
+    const uint16_t y_pitch;
     const uint8_t touch_threshold;
     const uint8_t touch_hysteresis;
     const uint8_t internal_touch_threshold;

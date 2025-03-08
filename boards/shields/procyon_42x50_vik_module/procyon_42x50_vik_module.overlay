@@ -8,6 +8,8 @@
 		active-acq-time-ms = <255>;
 		sensor-width = <42>;
 		sensor-height= <50>;
+		x-pitch = <38>;
+		y-pitch = <38>;
 		touch_threshold = <20>;
 		touch_hysteresis = <10>;
 		internal_touch_threshold = <10>;
