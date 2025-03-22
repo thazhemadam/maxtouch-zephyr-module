@@ -5,6 +5,10 @@
 
 #include <dt-bindings/pinctrl/rpi-pico-rp2040-pinctrl.h>
 
+zephyr_udc0: &usbd {
+	status = "okay";
+};
+
 &pinctrl {
 
 	i2c0_default: i2c0_default {

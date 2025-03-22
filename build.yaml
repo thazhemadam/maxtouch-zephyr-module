@@ -23,3 +23,4 @@ include:
   #   shield: peacock_vik_module
   - board: peacock_controller
     shield: procyon_42x50_vik_module
+    snippet: cdc-acm-console
